@@ -1,8 +1,8 @@
-import { PatientDTO, PatientShortDTO, NewPatientDTO } from "../models/patient.model";
+import { PatientDTO, PatientShortDTO, NewPatientDTO, PatientFilter } from "../models/patient.model";
 import { PatientsMapper, } from "../mappers/patients.mapper";
 import { Request, Response, Router } from "express";
 import { isNiss, isNumber,isString } from "../utils/guards";
-
+import { LoggerService } from "../services/logger.service";
 
 export const patientsController = Router();
 
@@ -149,6 +149,21 @@ patientsController.get("/doctor/:id/zipcode/:zipcode", (req: Request, res: Respo
   }
 
   res.status(404).send('Patient not found');
+});
+
+patientsController.get("/",(req: Request,res: Response) =>{
+  LoggerService.info(`GET /doctors/ - speciality: ${req.query.speciality }`);
+
+  const zipCode = req.query.zipCode;
+  const result : PatientDTO[] = [];
+
+  let filterPatients = patients;
+
+  if(zipCode){
+    for(let i = 0 ; i < patients.length; i++)
+      
+  }
+
 });
 
 patientsController.post("/", (req: Request, res: Response) => {

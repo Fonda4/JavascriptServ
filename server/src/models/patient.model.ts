@@ -41,3 +41,7 @@ export interface NewPatient {
   address: Address;
   refDoctor: number;
 }
+
+export interface PatientFilter {
+  zipCode? : string;
+}

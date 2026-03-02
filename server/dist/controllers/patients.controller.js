@@ -4,6 +4,7 @@ exports.patientsController = void 0;
 const patients_mapper_1 = require("../mappers/patients.mapper");
 const express_1 = require("express");
 const guards_1 = require("../utils/guards");
+const logger_service_1 = require("../services/logger.service");
 exports.patientsController = (0, express_1.Router)();
 console.log("OK");
 const patients = [
@@ -117,6 +118,16 @@ exports.patientsController.get("/doctor/:id/zipcode/:zipcode", (req, res) => {
         return;
     }
     res.status(404).send('Patient not found');
+});
+exports.patientsController.get("/", (req, res) => {
+    logger_service_1.LoggerService.info(`GET /doctors/ - speciality: ${req.query.speciality}`);
+    const zipCode = req.query.zipCode;
+    const result = [];
+    let filterPatients = patients;
+    if (zipCode) {
+        for (let i = 0; i < patients.length; i++)
+            ;
+    }
 });
 exports.patientsController.post("/", (req, res) => {
     const newPatientDTO = req.body;
