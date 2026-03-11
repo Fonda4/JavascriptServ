@@ -1,0 +1,17 @@
+### Test de connexion réussie (si l'utilisateur admin existe)
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+### Test de connexion échouée (mauvais mot de passe)
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "mauvaismotdepasse"
+}

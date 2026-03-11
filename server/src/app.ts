@@ -21,4 +21,5 @@ app.get('/', (req: Request, res: Response) => {
 app.use('/doctors', doctorsController);
 app.use('/patients', patientsController);
 app.use('/users', usersController)
+app.use('/auth', usersController)
 

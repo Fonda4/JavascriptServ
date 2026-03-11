@@ -1,5 +1,5 @@
 import { Doctor, DoctorFilter, DoctorDBO } from "../models/doctor.model";
-import { FilesService } from "../models/files.service";
+import { FilesService } from "./files.service";
 import { LoggerService } from "./logger.service";
 import { DoctorsMapper } from "../mappers/doctors.mapper";
 

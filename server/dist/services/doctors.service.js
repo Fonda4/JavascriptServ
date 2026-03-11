@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DoctorsService = void 0;
-const files_service_1 = require("../models/files.service");
+const files_service_1 = require("./files.service");
 const logger_service_1 = require("./logger.service");
 const doctors_mapper_1 = require("../mappers/doctors.mapper");
 class DoctorsService {

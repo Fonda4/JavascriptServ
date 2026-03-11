@@ -22,3 +22,4 @@ exports.app.get('/', (req, res) => {
 exports.app.use('/doctors', doctors_controller_1.doctorsController);
 exports.app.use('/patients', patients_controller_1.patientsController);
 exports.app.use('/users', users_controllers_1.usersController);
+exports.app.use('/auth', users_controllers_1.usersController);

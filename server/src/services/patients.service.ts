@@ -1,4 +1,4 @@
-import { Patient, PatientDBO, PatientFilter } from "../models/patient.model";import { FilesService } from "../models/files.service";
+import { Patient, PatientDBO, PatientFilter } from "../models/patient.model";import { FilesService } from "./files.service";
 import { LoggerService } from "./logger.service";
 import { PatientsMapper } from "../mappers/patients.mapper";
 import { DoctorsService } from "./doctors.service";
